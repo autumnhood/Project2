@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<xsl:output method="html" encoding="UTF-8"/>	
+  	<title>Autumn's Album Collection</title>
+	<meta name="description" content="Welcome to my album collection" />
+	<meta name="keywords" content="albums, records, collection, music" />
+	<meta name="author" content="Autumn Hood" />
+	<link rel="stylesheet" type="text/css" href="style.css" >
+	<script src="sorttable.js"></script>	
+
+
+<script language="javascript">
+function loadXMLDoc(dname)
+{
+    if (window.XMLHttpRequest)
+    {
+        xhttp=new XMLHttpRequest();
+    }
+    else
+    {
+        xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.open("GET",dname,false);
+try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
+xhttp.send("");    
+return xhttp.responseXML;
+}
+function displayResult()
+{
+  // var xml;
+   //var xsl;
+   //var ex;
+   //var resultDocument
+   
+   xml = loadXMLDoc("xml/albumcollection.xml");
+   xsl = loadXMLDoc("xml/albumcollection.xsl");
+   // code for IE
+   if (window.ActiveXObject)
+   {
+        ex=xml.transformNode(xsl);
+        document.getElementById("example").innerHTML=ex;
+   }
+   
+   // code for Mozilla, FireFox, Opera, etc.
+   else if (document.implementation && document.implementation.createDocument)
+   {
+        xsltProcessor=new XSLTProcessor();
+        xsltProcessor.importStylesheet(xsl);
+        resultDocument = xsltProcessor.transformToFragment(xml,document);
+        document.getElementById("example").appendChild(resultDocument);
+   }
+}
+</script>	
+</head>
+
+<header><h1>Autumn's Album Collection</h1>
+</header>
+
+
+
+<body onload="displayResult () ">
+
+</script>
+
+<table class="sortable">
+	<div id = "tablehead"><thead>
+	  <tr>
+	  <th>Artist</th>
+	  <th>Album Title</th>
+	  <th>Album Length</th>
+	  <th>Number of Tracks</th>
+	  <th>Record Label</th>
+	  <th>Decade Released</th>
+	  <th>Year Released</th>
+	  <th>Month Released</th>
+	  <th>Day Released</th>
+	  <th>Album Genre</th>
+	  <th>Album Condition</th>
+	  </tr>
+	</thead></div> 
+
+<tbody>
+<script>
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","albumcollection.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+document.write("<table border='1'>");
+var x=xmlDoc.getElementsByTagName("album");
+for (i=0;i<x.length;i++)
+  {
+  document.write("<tr><td>");
+  document.write(x[i].getElementsByTagName("artist")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName("album_title")[0].childNodes[0].nodeValue);
+   document.write("<tr><td>");
+  document.write(x[i].getElementsByTagName("album_length")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName("number_of_tracks")[0].childNodes[0].nodeValue);
+  document.write("</td></tr>");
+   document.write("<tr><td>");
+  document.write(x[i].getElementsByTagName("record_label")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName("decade_released")[0].childNodes[0].nodeValue);
+  document.write("</td></tr>"); 
+	document.write("<tr><td>");
+  document.write(x[i].getElementsByTagName("year_released")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName("month_released")[0].childNodes[0].nodeValue);
+  document.write("</td></tr>");
+   document.write("<tr><td>");
+  document.write(x[i].getElementsByTagName("day_released")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName("album_genre")[0].childNodes[0].nodeValue);
+  document.write("</td></tr>"); 
+   document.write("<tr><td>");
+  document.write(x[i].getElementsByTagName("album_condition")[0].childNodes[0].nodeValue);
+
+  }
+document.write("</table>");
+</script> 
+<a href="albumcollection.xml">Album</a>
+</tbody>  
+</table>
+<div id="example" />
+</body>
+</html>

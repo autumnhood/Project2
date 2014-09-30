@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="albumcollection.xsl" type="text/xsl" ?>
+<!--artist input rules: Input collaborative artists as one element.-->
+<!--genre input rules: Use allmusic.com as primary genre authority and wikipedia.com as secondary genre authority.-->
+<!--track credit input rules: do not list band names; list single artists. List artists in alphabetical order by last name. List first names first.--> 
+<!--album condition input rules: Use categorization schema from http://www.vinylrecords.ch/Vinyl/vin_grading.htm -->
+
+<album_collection title="My Albums">
+	<album>
+		<artist>The Beatles</artist> 
+		<album_title>Abbey Road</album_title>
+		<album_length>47&#58;29</album_length>
+		
+		<number_of_tracks>17</number_of_tracks>
+		
+		<tracks>
+			<track_number>1</track_number>
+			<track_title>Come Together</track_title>
+			<track_length>4:19</track_length>
+			<credit>			
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>			
+			
+			<track_number>2</track_number>
+			<track_title>Something</track_title>
+			<track_length>3:02</track_length>
+			<credit>			
+				<track_credit>George Harrison</track_credit>
+			</credit>
+			
+			<track_number>3</track_number>		
+			<track_title>Maxwell&#39;s Silver Hammer</track_title>
+			<track_length>3:27</track_length>
+			<credit>			
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>
+			
+			<track_number>4</track_number>		
+			<track_title>Oh! Darling</track_title>
+			<track_length>3:27</track_length>
+			<credit>
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>
+			
+			<track_number>5</track_number>
+			<track_title>Octopus&#39;s Garden</track_title>
+			<track_length>2:50</track_length>
+			<credit>
+				<track_credit>Richard Starkey/Ringo Starr</track_credit>
+			</credit>		
+			
+			<track_number>6</track_number>
+			<track_title>I Want  You (She&#39;s So Heavy)</track_title>
+			<track_length>7:47</track_length>
+			<credit>
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>		
+			
+			<track_number>7</track_number>
+			<track_title>Here Comes the Sun</track_title>
+			<track_length>3:05</track_length>
+			<credit>
+				<track_credit>George Harrison</track_credit>
+			</credit>
+			
+			<track_number>8</track_number>
+			<track_title>Because</track_title>
+			<track_length>2:45</track_length>
+			<credit>
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>
+
+			<track_number>9</track_number>
+			<track_title>You Never Give Me Your Money</track_title>
+			<track_length>4:02</track_length>
+			<credit>
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>
+			
+			<track_number>10</track_number>		
+			<track_title>Sun King</track_title>
+			<track_length>2:26</track_length>
+			<credit>
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>
+			
+			<track_number>11</track_number>
+			<track_title>Mean Mr. Mustard</track_title>
+			<track_length>1:06</track_length>
+			<credit>
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>
+			
+			<track_number>12</track_number>
+			<track_title>Polythene Pam</track_title>
+			<track_length>1:12</track_length>
+			<credit>
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>
+			
+			<track_number>13</track_number>		
+			<track_title>She Came in Through the Bathroom Window</track_title>
+			<track_length>1:58</track_length>
+			<credit>			
+				<track_credit>John Lennon</track_credit>
+				<track_credit> McCartney</track_credit>
+			</credit>
+			
+			<track_number>14</track_number>			
+			<track_title>Golden Slumbers</track_title>
+			<track_length>1:31</track_length>
+			<credit>
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>
+			
+			<track_number>15</track_number>
+			<track_title>Carry That Weight</track_title>
+			<track_length>1:36</track_length>
+			<credit>
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>
+			
+			<track_number>16</track_number>
+			<track_title>The End</track_title>
+			<track_length>2:21</track_length>
+			<credit>
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>	
+			
+			<track_number>17</track_number>
+			<track_title>Her Majesty</track_title>
+			<track_length>0:26</track_length>
+			<credit>			
+				<track_credit>John Lennon</track_credit>
+				<track_credit>Paul McCartney</track_credit>
+			</credit>			
+		</tracks>
+		
+		<record_label>Apple</record_label>
+		
+		<date_released>
+			<decade_released>1960s</decade_released>
+			<year_released>1969</year_released>
+			<month_released>September</month_released>
+			<day_released>29</day_released>
+		</date_released>
+		
+		<genres>
+			<album_genre>Rock</album_genre>
+			<album_genre>Pop</album_genre>
+			<album_genre>Classic Rock</album_genre>
+		</genres>
+		
+		<album_condition>VG</album_condition>
+	</album>
+	
+</album_collection>
