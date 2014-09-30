@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="html"/>
 <xsl:template match="/albumcollection">
 <html>
 	<head>
@@ -21,7 +22,7 @@
 				<th>Album Condition</th>
 			</tr>
 			
-		<xsl:for-each select="album">
+		<xsl:for-each select="/album">
 			<tr>
 				<td class="medium"><xsl:value-of select="artist" /></td>
 				<td class="medium"><xsl:value-of select="album_title" /></td>

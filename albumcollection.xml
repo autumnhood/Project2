@@ -5,7 +5,8 @@
 <!--track credit input rules: do not list band names; list single artists. List artists in alphabetical order by last name. List first names first.--> 
 <!--album condition input rules: Use categorization schema from http://www.vinylrecords.ch/Vinyl/vin_grading.htm -->
 
-<album_collection title="My Albums">
+<albumcollection title="My Albums">
+
 	<album>
 		<artist>The Beatles</artist> 
 		<album_title>Abbey Road</album_title>
@@ -165,5 +166,5 @@
 		
 		<album_condition>VG</album_condition>
 	</album>
-	
-</album_collection>
+
+</albumcollection>
