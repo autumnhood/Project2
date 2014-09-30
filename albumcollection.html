@@ -34,8 +34,8 @@ function displayResult()
    //var ex;
    //var resultDocument
    
-   xml = loadXMLDoc("xml/albumcollection.xml");
-   xsl = loadXMLDoc("xml/albumcollection.xsl");
+   xml = loadXMLDoc("albumcollection.xml");
+   xsl = loadXMLDoc("albumcollection.xsl");
    // code for IE
    if (window.ActiveXObject)
    {
@@ -52,86 +52,12 @@ function displayResult()
         document.getElementById("example").appendChild(resultDocument);
    }
 }
-</script>	
-</head>
-
-<header><h1>Autumn's Album Collection</h1>
-</header>
-
-
-
-<body onload="displayResult () ">
-
 </script>
 
-<table class="sortable">
-	<div id = "tablehead"><thead>
-	  <tr>
-	  <th>Artist</th>
-	  <th>Album Title</th>
-	  <th>Album Length</th>
-	  <th>Number of Tracks</th>
-	  <th>Record Label</th>
-	  <th>Decade Released</th>
-	  <th>Year Released</th>
-	  <th>Month Released</th>
-	  <th>Day Released</th>
-	  <th>Album Genre</th>
-	  <th>Album Condition</th>
-	  </tr>
-	</thead></div> 
+</head>
+<body onload="displayResult()">
 
-<tbody>
-<script>
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.open("GET","albumcollection.xml",false);
-xmlhttp.send();
-xmlDoc=xmlhttp.responseXML;
-
-document.write("<table border='1'>");
-var x=xmlDoc.getElementsByTagName("/album");
-for (i=0;i<x.length;i++)
-  {
-  document.write("<tr><td>");
-  document.write(x[i].getElementsByTagName("artist")[0].childNodes[0].nodeValue);
-  document.write("</td><td>");
-  document.write(x[i].getElementsByTagName("album_title")[0].childNodes[0].nodeValue);
-   document.write("<tr><td>");
-  document.write(x[i].getElementsByTagName("album_length")[0].childNodes[0].nodeValue);
-  document.write("</td><td>");
-  document.write(x[i].getElementsByTagName("number_of_tracks")[0].childNodes[0].nodeValue);
-  document.write("</td></tr>");
-   document.write("<tr><td>");
-  document.write(x[i].getElementsByTagName("record_label")[0].childNodes[0].nodeValue);
-  document.write("</td><td>");
-  document.write(x[i].getElementsByTagName("decade_released")[0].childNodes[0].nodeValue);
-  document.write("</td></tr>"); 
-	document.write("<tr><td>");
-  document.write(x[i].getElementsByTagName("year_released")[0].childNodes[0].nodeValue);
-  document.write("</td><td>");
-  document.write(x[i].getElementsByTagName("month_released")[0].childNodes[0].nodeValue);
-  document.write("</td></tr>");
-   document.write("<tr><td>");
-  document.write(x[i].getElementsByTagName("day_released")[0].childNodes[0].nodeValue);
-  document.write("</td><td>");
-  document.write(x[i].getElementsByTagName("album_genre")[0].childNodes[0].nodeValue);
-  document.write("</td></tr>"); 
-   document.write("<tr><td>");
-  document.write(x[i].getElementsByTagName("album_condition")[0].childNodes[0].nodeValue);
-
-  }
-document.write("</table>");
-</script> 
-<a href="albumcollection.xml">Album</a>
-</tbody>  
-</table>
 <div id="example" />
+</div>
 </body>
 </html>

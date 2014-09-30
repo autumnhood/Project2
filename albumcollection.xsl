@@ -22,31 +22,29 @@
 				<th>Album Condition</th>
 			</tr>
 			
-		<xsl:for-each select="/album">
+		<xsl:for-each select="album">
 			<tr>
 				<td class="medium"><xsl:value-of select="artist" /></td>
 				<td class="medium"><xsl:value-of select="album_title" /></td>
 				<td class="narrow"><xsl:value-of select="album_length" /></td>
-				<td class="narrow"><xsl:value-of select="number_of_tracks" />
-				<td class="narrow"><xsl:value-of select="track_number" /></td>
-				<td class="medium"><xsl:value-of select="track_title" /></td>
-				<td class="narrow"><xsl:value-of select="track_length" /></td>
-				
-				<xsl:for-each select="credit"><td class="medium">
-				<ul><xsl:for-each select="track_credit">
-				<li><xsl:value-of select="." /></li>
-				</xsl:for-each></ul></td></xsl:for-each>
-
+				<td class="narrow"><xsl:value-of select="number_of_tracks" /></td>
 				<td class="narrow"><xsl:value-of select="record_label" /></td>
-				<td class="narrow"><xsl:value-of select="decade_released" /></td>
-				<td class="narrow"><xsl:value-of select="year_released" /></td>
-				<td class="narrow"><xsl:value-of select="month_released" /></td>
-				<td class="narrow"><xsl:value-of select="day_released" /></td>
-
-				<xsl:for-each select="genre">
-				<td class="medium">	<ul><xsl:for-each select="album_genre">
-				<li><xsl:value-of select="." />
-				</li></xsl:for-each></ul></td></xsl:for-each>
+				<xsl:for-each select="date_released">
+					<td class="narrow"><xsl:value-of select="decade_released" /></td>
+					<td class="narrow"><xsl:value-of select="year_released" /></td>
+					<td class="narrow"><xsl:value-of select="month_released" /></td>
+					<td class="narrow"><xsl:value-of select="day_released" /></td>
+				</xsl:for-each>
+				
+				<xsl:for-each select="genres">
+					<td class="narrow">
+					<ul>
+					<xsl:for-each select="album_genre"> 
+					<li><xsl:value-of select="." /></li>
+					</xsl:for-each>
+					</ul>
+					</td>
+					</xsl:for-each> 
 				
 				<td class="narrow"><xsl:value-of select="album_condition" /></td>
 				

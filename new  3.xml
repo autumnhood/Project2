@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<xsl:for-each select="class-activities">
+<td class="medium">
+<ul>
+<xsl:for-each select="activity">
+<li>
+<xsl:value-of select="." />
+</li>
+</xsl:for-each>
+</ul>
+</td>
+</xsl:for-each>
